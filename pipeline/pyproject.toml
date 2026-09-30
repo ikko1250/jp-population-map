@@ -1,0 +1,19 @@
+[project]
+name = "jp-population-pipeline"
+version = "0.1.0"
+description = "社人研の市区町村別将来推計人口と国土数値情報の行政区域を結合し、TopoJSON を生成する"
+requires-python = ">=3.12"
+dependencies = [
+    "openpyxl>=3.1",
+    "pandas>=2.2",
+    "geopandas>=1.0",
+    "shapely>=2.0",
+    "pyogrio>=0.9",
+]
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
